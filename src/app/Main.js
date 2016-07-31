@@ -139,7 +139,7 @@ class Main extends Component {
     this.state = {
       pois: [{
         id: 0,
-        name: "The Opera House",
+        name: "Opera House",
         stats: {
           posts: 5
         }
@@ -148,14 +148,14 @@ class Main extends Component {
         id: 1,
         name: "Circular Quay",
         stats: {
-          posts: 2
+          posts: 6
         }
       },
       {
         id: 2,
-        name: "464 Bus",
+        name: "Museum of Sydney",
         stats: {
-          posts: 13
+          posts: 1
         }
       }
       ]
@@ -171,8 +171,7 @@ class Main extends Component {
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
         <div>
-          
-            <ViewPlace/>
+            <LookForPlaces pois={this.state.pois}/>
         </div>
       </MuiThemeProvider>
     );
@@ -184,11 +183,11 @@ class ViewPlace extends Component {
     super(props)
     this.state = {
       feedItems: [
-        { contentText: "Some stupid tweet thingo that goes here",  },
-        { contentText: "Some other stupid thing that does things" },
-        { contentImg: "/img1.jpg", contentText: "Here's a silly caption for a silly photo, bitch!" },
+        { contentText: "Can't believe I found a Mew here!!!",  },
+        { contentText: "Omg....Jackie Chan slid down here today" },
+        { contentImg: "/img1.jpg", contentText: "Here's a good sailsperson!" },
         { contentImg: "/img2.jpg" },
-        { contentText: "Some other stupid thing that does things" },
+        { contentText: "An amazing place to be to find my inner peace" },
       ],
       postTextOpen: false,
       postImageOpen: false,
@@ -202,7 +201,7 @@ class ViewPlace extends Component {
   }
 
   goBack(ev) {
-    alert(1)
+    
   }
 
   postText(ev) {
@@ -234,7 +233,7 @@ class ViewPlace extends Component {
   render() {
     return <div>
       <AppBar
-        title="Place"
+        title="Opera House"
 
         // onLeftIconButtonTouchTap={this.goBack}
         // onRightIconButtonTouchTap={this.postSomething}
